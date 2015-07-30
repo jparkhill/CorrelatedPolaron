@@ -1,0 +1,24 @@
+		# Final result should be:
+		# [[ C1(t)]
+ 		#  [ C2(t)]
+  		#  [ C3(t)]
+  		#  [ C4(t)]
+  		#  [ C5(t)]
+  		#  [ C6(t)]
+  		#  [ C7(t)]]
+		# 
+
+		# self.H.NewState[rho]
+		# clone the new state to put the result
+		# newstate[rho] += self.H.dot(oldstate[rho])
+		# newstate[rho] -= oldstate[rho].dot(self.H)
+		# newstate.multiplyscalar(complex(0.0,-1.0))
+		# for i in range(7):
+		#	for j in range(7):
+		# 		for the TCL term - this is going to use the Ci(t)s calculated above
+		# depends on J(w) for state 1, J(w) for state 2
+		# integral of all these Js * exp (iwt)
+		# newstate[rho] += the integral
+		# pick an intelegent way to do the integral, but it's only a 7x7
+		# time is an argument for the routine
+		# might have to prepare the integral for each J(w) outside of the loop that does the tensor contraction
